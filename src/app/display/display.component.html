@@ -1,0 +1,10 @@
+<h1>List of Students</h1>
+<ul>
+<div *ngFor="let item of List;let i=index">
+    <li>{{item.name}}</li>
+    <!-- <span><button [routerLink]="['/students',i,item.name]" routerLinkActive="router-link-active">click me</button></span> -->
+    <span><button [routerLink]="['/info']" routerLinkActive="router-link-active" [queryParams]="{page: 1, orderBy:'asc'}">Touch</button></span>
+
+</div>
+</ul>
+ 
