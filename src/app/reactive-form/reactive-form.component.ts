@@ -15,9 +15,10 @@ export class ReactiveFormComponent implements OnInit{
       fullName:new FormControl('',
       [
         Validators.required,
-        Validators.minLength(5),
-        Validators.maxLength(10),
-        Validators.pattern("^[a-zA-Z ]*$")
+        // Validators.minLength(5),
+        // Validators.maxLength(10),
+        // Validators.pattern("^[a-zA-Z].{5,10}$")   (?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}
+          Validators.pattern("(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}")
       ]),
       email:new FormControl('',
       [

@@ -13,25 +13,25 @@ export class StudentInfoComponent implements OnInit{
   //     {eid:3,fname:'Kishore',age:80}
   // ]
 
-  constructor(private route: ActivatedRoute){
+  constructor(private route: ActivatedRoute){ 
 
   }
   ngOnInit(): void {
-    // this.route.paramMap.subscribe(value=>{
-    //   // console.log(value)
-    //   let id=value.get('id');
-    //   const name=value.get('name');
-    //   const page=value.get('page');
-    //   console.log(id);
-    //   console.log(name);
-    //   console.log(page);
+    this.route.paramMap.subscribe(value=>{
+      // console.log(value)
+      let id=value.get('id');
+      const name=value.get('name');
+      // const page=value.get('page');
+      console.log(id);
+      console.log(name);
+      // console.log(page);
 
-    // });
-    this.route.queryParamMap.subscribe(value => {
-      let page1 = value.get('page');
-      let order = value.get('orderBy');
-      console.log(page1 + " " + order);
-    })
+    });
+    // this.route.queryParamMap.subscribe(value => {
+    //   let page1 = value.get('page');
+    //   let order = value.get('orderBy');
+    //   console.log(page1 + " " + order);
+    // })
 
   }
 

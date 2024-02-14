@@ -2,9 +2,18 @@
 <ul>
 <div *ngFor="let item of List;let i=index">
     <li>{{item.name}}</li>
-    <!-- <span><button [routerLink]="['/students',i,item.name]" routerLinkActive="router-link-active">click me</button></span> -->
-    <span><button [routerLink]="['/info']" routerLinkActive="router-link-active" [queryParams]="{page: 1, orderBy:'asc'}">Touch</button></span>
+    <span><button class="btn btn-primary" [routerLink]="['/info',i,item.name]" routerLinkActive="router-link-active">click me</button></span><br>
+    <!-- <button type="submit" onclick()>Submit</button> -->
+    <!-- <span><button [routerLink]="['/info']" routerLinkActive="router-link-active" [queryParams]="{page: 1, orderBy:'asc'}">Touch</button></span> -->
 
-</div>
+</div><br>
+<div *ngFor="let items of posts">
+    <li>{{items.id}} is {{items.postTitle}}</li>
+    <!-- <span><button class="btn btn-primary" [routerLink]="['/info',i,item.name]" routerLinkActive="router-link-active">click me</button></span><br> -->
+    <!-- <button type="submit" onclick()>Submit</button> -->
+    <!-- <span><button [routerLink]="['/info']" routerLinkActive="router-link-active" [queryParams]="{page: 1, orderBy:'asc'}">Touch</button></span> -->
+
+</div><br>
+<button class="btn btn-primary" (click)="onSubmit()" >Submit</button>
 </ul>
- 
+  

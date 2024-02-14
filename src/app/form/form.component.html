@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<!-- <div class="container mt-5">
 <div class="form-area">
 <form #f="ngForm" (submit)="onSubmit(f)">
     <div class="form-group">
@@ -22,8 +22,8 @@
 
     <label> Email: </label>
     <input type="email" class="form-control" id="email" name="email" ngModel email #email="ngModel" (change)="getValue(email)" [ngClass]="{'is-invalid':email.invalid}" required><br>
-    <!-- <div *ngIf="email.errors?.['pattern']">   -->
-    <div class="alert alert-danger"
+    <div *ngIf="email.errors?.['pattern']">   -->
+    <!-- <div class="alert alert-danger"
             *ngIf="email.touched && email.invalid"> Invalid Email
         </div>
 
@@ -37,4 +37,4 @@
     
 </form>
 </div>
-</div>
+</div> --> -->
